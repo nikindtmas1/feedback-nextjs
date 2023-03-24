@@ -18,13 +18,13 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <ul className={styles.grid}>
-            <li className={styles.card}>
+            <li className={styles.nav}>
               <Link href="/api/hello">Go to</Link>
             </li>
-            <li className={styles.card}>
+            <li className={styles.nav}>
               <Link href="/api/hello">Go to</Link>
             </li>
-            <li className={styles.card}>
+            <li className={styles.nav}>
               <Link href="/api/hello">Go to</Link>
             </li>
           </ul>
