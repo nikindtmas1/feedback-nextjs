@@ -25,6 +25,13 @@
   gap: 0.5rem;
 }
 
+.description ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 .description p {
   position: relative;
   margin: 0;
@@ -41,7 +48,6 @@
 
 .grid {
   list-style-type: none;
-  border: #ffffff70;
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
@@ -54,6 +60,14 @@
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+}
+
+.nav {
+  padding: 1rem 1.2rem;
+  border: 1px solid brown;
+  margin: 2px;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
 }
 
 .card span {
