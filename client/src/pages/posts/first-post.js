@@ -1,21 +1,19 @@
 import Link from "next/link";
 import styles from '@/styles/Home.module.css'
 import Head from "next/head";
+import Layout from "../../../components/layout";
 
 export default function PostOne() {
     return (
-        <>
+        <Layout>
         <Head>
             <title>First Post</title>
         </Head>
-        <main className={styles.main}>
-            <div className={styles.description}>
                 <h1>First Post</h1>
-                <a>
+                <h2>
                     <Link href='/'>← Back to home</Link>
-                </a>
-            </div>
-        </main>
-        </>
+                </h2>
+   
+        </Layout>
     )
 }
