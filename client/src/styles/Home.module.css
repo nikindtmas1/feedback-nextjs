@@ -40,6 +40,8 @@
 }
 
 .grid {
+  list-style-type: none;
+  border: #ffffff70;
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
