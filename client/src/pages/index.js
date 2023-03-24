@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import Navigation from './navigation/navigation'
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
@@ -17,17 +17,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <ul className={styles.grid}>
-            <li className={styles.nav}>
-              <Link href="/api/hello">Go to</Link>
-            </li>
-            <li className={styles.nav}>
-              <Link href="/api/hello">Go to</Link>
-            </li>
-            <li className={styles.nav}>
-              <Link href="/api/hello">Go to</Link>
-            </li>
-          </ul>
+          <Navigation />
           {/* <p>
             Get started by editing&nbsp;
             <code className={styles.code}>src/pages/index.js</code>
