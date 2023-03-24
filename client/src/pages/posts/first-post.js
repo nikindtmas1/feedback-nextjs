@@ -12,7 +12,7 @@ export default function PostOne() {
             <div className={styles.description}>
                 <h1>First Post</h1>
                 <a>
-                    <Link href='/'>Back to home</Link>
+                    <Link href='/'>← Back to home</Link>
                 </a>
             </div>
         </main>
