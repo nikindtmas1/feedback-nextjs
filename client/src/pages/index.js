@@ -17,40 +17,14 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <ul style={{
-            listStyleType: 'none',
-            margin: 0,
-            padding: 0,
-            backgroundColor: '#333'
-            }}>
-            <li style={{
-              padding: '14px', 
-              color: 'white', 
-              textAlign: 'center', 
-              textDecoration: 'none', 
-              display: 'block', 
-              float: 'left'
-              }}>
+          <ul className={styles.grid}>
+            <li className={styles.card}>
               <Link href="/api/hello">Go to</Link>
             </li>
-            <li style={{
-               padding: '14px', 
-               color: 'white', 
-               textAlign: 'center', 
-               textDecoration: 'none', 
-               display: 'block',
-               float: 'left'
-            }}>
+            <li className={styles.card}>
               <Link href="/api/hello">Go to</Link>
             </li>
-            <li style={{
-               padding: '14px', 
-               color: 'white', 
-               textAlign: 'center', 
-               textDecoration: 'none', 
-               display: 'block',
-               float: 'left'
-            }}>
+            <li className={styles.card}>
               <Link href="/api/hello">Go to</Link>
             </li>
           </ul>
