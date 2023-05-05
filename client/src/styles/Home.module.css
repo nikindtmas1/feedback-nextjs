@@ -292,3 +292,9 @@
     transform: rotate(0deg);
   }
 }
+
+.numdisplay {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
