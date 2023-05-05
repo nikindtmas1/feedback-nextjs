@@ -29,19 +29,25 @@ export default function Home({allPostData}) {
           <Navigation />
       <main className={styles.main}>
         <div className={styles.description}>
-         <ul>
+      
           {allPostData.map(({text, rating,peopleName,userName}) => (
-            <li>
-              {text}
-              <br />
-              {rating}
-              <br />
-              {peopleName}
-              <br />
-              {userName}
-            </li>
+           <div className={styles.card}>
+          <div className={''}>
+             {rating}
+          </div>
+              <div>
+                {text}
+              </div>
+           <div>
+             {peopleName}
+           </div>
+            <div>
+             {userName}
+            </div>
+           </div>
+           
           ))}
-         </ul>
+       
         </div>
       </main>
     </>
