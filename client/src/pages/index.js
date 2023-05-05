@@ -6,18 +6,18 @@ import { getGoshoData } from '../lib/post';
 export async function getStaticProps() {
   const strData = await getGoshoData();
  
-  const allPostData = Object.values(strData);
+  const allGoshoData = Object.values(strData);
 
   return {
     props: {
-      allPostData,
+      allGoshoData,
     },
   };
 }
 
 // const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({allPostData}) {
+export default function Home({allGoshoData}) {
   return (
     <>
       <Head>
@@ -30,7 +30,7 @@ export default function Home({allPostData}) {
       <main className={styles.main}>
         <div className={styles.description}>
       
-          {allPostData.map(({text, rating,peopleName,userName}) => (
+          {allGoshoData.map(({text, rating,peopleName,userName}) => (
            <div className={styles.card}>
           <div className={''}>
              {rating}
