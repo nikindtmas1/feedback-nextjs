@@ -9,7 +9,7 @@ export async function getStaticProps() {
   const strData = await getSortedPostsData();
  
   const allPostData = Object.values(strData);
-  console.log(allPostData);
+
   return {
     props: {
       allPostData,
