@@ -3,10 +3,20 @@ import Navigation from '@/navigation/Navigation'
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import { getSortedPostsData } from '@/lib/post';
+
+// export async function getStaticProps() {
+//   const allPostData = getSortedPostsData();
+//   return {
+//     props: {
+//       allPostData,
+//     },
+//   };
+// }
 
 // const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({allPostData}) {
   return (
     <>
       <Head>
@@ -18,6 +28,7 @@ export default function Home() {
           <Navigation />
       <main className={styles.main}>
         <div className={styles.description}>
+         
           {/* <p>
             Get started by editing&nbsp;
             <code className={styles.code}>src/pages/index.js</code>
