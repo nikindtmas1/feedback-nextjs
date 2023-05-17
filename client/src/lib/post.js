@@ -5,3 +5,7 @@ export async function getGoshoData() {
     const jsonData = await responce.json();
     return jsonData;
 };
+
+export function getAllDataIds(params) {
+    
+}
