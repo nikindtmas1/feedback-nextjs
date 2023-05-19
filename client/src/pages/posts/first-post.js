@@ -2,13 +2,14 @@ import Link from "next/link";
 import styles from '@/styles/Home.module.css'
 import Head from "next/head";
 import Layout from "../../../components/layout";
-import { getPeshoData } from "../../lib/post";
+
 
 export async function getServerSideProps() {
-    const strData = getPeshoData();
+    const responce = await fetch("http://localhost:5000/peshofeedbacks");
+    const jsonData = await responce.json();
 
-    const allPeshoData = Object.values(strData);
-    console.log('allData', allPeshoData);
+    const allPeshoData = Object.values(jsonData);
+  
     return {
         props: {
             allPeshoData,
@@ -18,7 +19,7 @@ export async function getServerSideProps() {
 
 export default function PostOne({allPeshoData}) {
     return (
-        <Layout>
+        <>
         <Head>
             <title>First Post</title>
         </Head>
@@ -44,11 +45,16 @@ export default function PostOne({allPeshoData}) {
           ))}
        
         </div>
-      </main>
+
+      <Layout>
                 <h2>
                     <Link href='/'>← Back to home</Link>
                 </h2>
+      </Layout>
+      </main>
+
+      
    
-        </Layout>
+        </>
     )
 }
