@@ -23,9 +23,13 @@ export default function PostOne({allPeshoData}) {
         <Head>
             <title>First Post</title>
         </Head>
+        
+          <h2>
+            This is Pesho Data Page
+          </h2>
+        
         <main className={styles.main}>
         <div className={styles.description}>
-      
           {allPeshoData.map(({text, rating,peopleName,userName}) => (
            <div className={styles.card}>
           <div className={''}>
