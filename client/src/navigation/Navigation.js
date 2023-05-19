@@ -6,10 +6,10 @@ export default function Navigation() {
       <nav>
         <ul className={styles.grid}>
             <li className={styles.nav}>
-              <Link href="/api/hello">Go to</Link>
+              <Link href="/posts/toshoData">Gosho Data</Link>
             </li>
             <li className={styles.nav}>
-              <Link href="/posts/first-post">posts</Link>
+              <Link href="/posts/peshoData">Pesho Data</Link>
             </li>
             <li className={styles.nav}>
               <Link href="/api/hello">Go to</Link>
