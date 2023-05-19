@@ -3,6 +3,11 @@ import Navigation from "@/navigation/Navigation";
 import styles from "@/styles/Home.module.css";
 import { getFeedbacksData } from "../lib/post";
 
+const people = [
+  {"name": "Gosho"}, {"name": "Tosho"}, {"name": "Pesho"}, 
+  {"name": "Tomi"}, {"name": "Bobi"}, {"name": "Miti"}
+]
+
 export async function getStaticProps() {
   const strData = await getFeedbacksData();
 
@@ -28,8 +33,37 @@ export default function Home({ allGoshoData }) {
       </Head>
       <Navigation />
       <label for="people">Choose a Therapiest: </label>
-
-      <select id="people">
+    <table>
+      <tr>
+        <td>
+        <select id="people">
+        <option value=''>...</option>
+        {people.map((x) => 
+        <option value={x.name}>{x.name}</option>
+        )}
+  
+      </select>
+        </td>
+        <td>
+        <select id="people">
+        <option value=''>...</option>
+        {people.map((x) => 
+        <option value={x.name}>{x.name}</option>
+        )}
+      </select>
+        </td>
+        <td>
+        <select id="people">
+        <option value=''>...</option>
+        {people.map((x) => 
+        <option value={x.name}>{x.name}</option>
+        )}
+      </select>
+        </td>
+      </tr>
+      
+    </table>
+    <select id="people">
         <option value=''>Choose...</option>
         <option value="gosho">Gosho</option>
         <option value="tosho">Tosho</option>
