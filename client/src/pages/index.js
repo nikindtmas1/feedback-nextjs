@@ -37,6 +37,15 @@ export default function Home({ allGoshoData }) {
       <tr>
         <td>
         <select id="people">
+        <option value=''>Choose...</option>
+        <option value="gosho">Gosho</option>
+        <option value="tosho">Tosho</option>
+        <option value="pesho">Pesho</option>
+        <option value="tomi">Tomi</option>
+      </select>
+        </td>
+        <td>
+        <select id="people">
         <option value=''>...</option>
         {people.map((x) => 
         <option value={x.name}>{x.name}</option>
@@ -63,13 +72,7 @@ export default function Home({ allGoshoData }) {
       </tr>
       
     </table>
-    <select id="people">
-        <option value=''>Choose...</option>
-        <option value="gosho">Gosho</option>
-        <option value="tosho">Tosho</option>
-        <option value="pesho">Pesho</option>
-        <option value="tomi">Tomi</option>
-      </select>
+
       <main className={styles.main}>
         <div className={styles.description}>
           {allGoshoData.map(({ text, rating, peopleName, userName }) => (
