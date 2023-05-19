@@ -6,6 +6,9 @@ export default function Navigation() {
       <nav>
         <ul className={styles.grid}>
             <li className={styles.nav}>
+              <Link href="/posts/goshoData">Gosho Data</Link>
+            </li>
+            <li className={styles.nav}>
               <Link href="/posts/toshoData">Tosho Data</Link>
             </li>
             <li className={styles.nav}>
