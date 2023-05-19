@@ -1,17 +1,8 @@
 
-export async function getGoshoData() {
+export async function getFeedbacksData() {
     
-    const responce = await fetch("http://localhost:5000/goshofeedbacks");
+    const responce = await fetch("http://localhost:5000/feedbacks");
     const jsonData = await responce.json();
     return jsonData;
 };
 
-export function getAllDataIds(params) {
-    
-}
-
-export async function getPeshoData() {
-    const responce = await fetch("http://localhost:5000/peshofeedbacks");
-    const jsonData = await responce.json();
-    return jsonData;
-};
