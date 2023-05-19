@@ -4,11 +4,11 @@ import Head from "next/head";
 import Layout from "../../../components/layout";
 import { getPeshoData } from "../../lib/post";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const strData = getPeshoData();
 
     const allPeshoData = Object.values(strData);
-    console.log(allPeshoData);
+    console.log('allData', allPeshoData);
     return {
         props: {
             allPeshoData,
