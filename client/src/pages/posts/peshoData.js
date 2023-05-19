@@ -21,7 +21,7 @@ export default function PostOne({allPeshoData}) {
     return (
         <>
         <Head>
-            <title>First Post</title>
+            <title>Pesho Post</title>
         </Head>
         
           <h2>
