@@ -2,11 +2,7 @@ import Head from "next/head";
 import Navigation from "@/navigation/Navigation";
 import styles from "@/styles/Home.module.css";
 import { getFeedbacksData } from "../lib/post";
-
-const people = [
-  {"name": "Gosho"}, {"name": "Tosho"}, {"name": "Pesho"}, 
-  {"name": "Tomi"}, {"name": "Bobi"}, {"name": "Miti"}
-]
+import { people } from "@/lib/peoples";
 
 export async function getStaticProps() {
   const strData = await getFeedbacksData();
