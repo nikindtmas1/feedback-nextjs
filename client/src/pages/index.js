@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Navigation from '@/navigation/Navigation'
 import styles from '@/styles/Home.module.css'
-import { getGoshoData } from '../lib/post';
+import { getFeedbacksData } from '../lib/post';
 
 export async function getStaticProps() {
-  const strData = await getGoshoData();
+  const strData = await getFeedbacksData();
  
   const allGoshoData = Object.values(strData);
 
