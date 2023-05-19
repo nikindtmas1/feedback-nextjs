@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Navigation from '@/navigation/Navigation'
-import styles from '@/styles/Home.module.css'
-import { getFeedbacksData } from '../lib/post';
+import Head from "next/head";
+import Navigation from "@/navigation/Navigation";
+import styles from "@/styles/Home.module.css";
+import { getFeedbacksData } from "../lib/post";
 
 export async function getStaticProps() {
   const strData = await getFeedbacksData();
- 
+
   const allGoshoData = Object.values(strData);
 
   return {
@@ -17,7 +17,7 @@ export async function getStaticProps() {
 
 // const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({allGoshoData}) {
+export default function Home({ allGoshoData }) {
   return (
     <>
       <Head>
@@ -26,30 +26,28 @@ export default function Home({allGoshoData}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-          <Navigation />
+      <Navigation />
+      <label for="people">Choose a Therapiest: </label>
+
+      <select id="people">
+        <option value=''>Choose...</option>
+        <option value="gosho">Gosho</option>
+        <option value="tosho">Tosho</option>
+        <option value="pesho">Pesho</option>
+        <option value="tomi">Tomi</option>
+      </select>
       <main className={styles.main}>
         <div className={styles.description}>
-      
-          {allGoshoData.map(({text, rating,peopleName,userName}) => (
-           <div className={styles.card}>
-          <div className={''}>
-             {rating}
-          </div>
-              <div>
-                {text}
-              </div>
-           <div>
-             {peopleName}
-           </div>
-            <div>
-             {userName}
+          {allGoshoData.map(({ text, rating, peopleName, userName }) => (
+            <div className={styles.card}>
+              <div className={""}>{rating}</div>
+              <div>{text}</div>
+              <div>{peopleName}</div>
+              <div>{userName}</div>
             </div>
-           </div>
-           
           ))}
-       
         </div>
       </main>
     </>
-  )
+  );
 }
