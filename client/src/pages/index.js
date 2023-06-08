@@ -4,8 +4,6 @@ import styles from "@/styles/Home.module.css";
 import { getFeedbacksData } from "../lib/post";
 import { people } from "@/lib/peoples";
 
-
-
 export async function getStaticProps() {
   const strData = await getFeedbacksData();
 
@@ -21,19 +19,20 @@ export async function getStaticProps() {
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ allGoshoData }) {
-
   function getValue() {
-
-    const e = document.getElementById('people');
+    const e = document.getElementById("people");
     const value = e.value;
-    
-    value === 'Gosho' ? window.location.href='/posts/goshoData' : 
-    value === 'Tosho' ? window.location.href='/posts/toshoData' :
-    value === 'Pesho' ? window.location.href='/posts/peshoData' :
-    value === 'Tomi' ? window.location.href='/posts/tomiData' : null
-  }
-    
 
+    value === "Gosho"
+      ? (window.location.href = "/posts/goshoData")
+      : value === "Tosho"
+      ? (window.location.href = "/posts/toshoData")
+      : value === "Pesho"
+      ? (window.location.href = "/posts/peshoData")
+      : value === "Tomi"
+      ? (window.location.href = "/posts/tomiData")
+      : null;
+  }
 
   return (
     <>
@@ -44,19 +43,12 @@ export default function Home({ allGoshoData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Navigation /> */}
+      <header>
+        <h2>This is Main Page</h2>
+      </header>
       <table>
         <tr>
-      <label for="people">Choose a Therapiest: </label>
-          {/* <td>
-            <select >
-              <option value="">Choose...</option>
-              <option value="gosho">Gosho</option>
-              <option value="tosho">Tosho</option>
-              <option value="pesho">Pesho</option>
-              <option value="tomi">Tomi</option>
-            </select>
-          </td> */}
-     
+          <label for="people">Choose a Therapiest: </label>
           <td>
             <select id="people" onChange={getValue}>
               <option value="">...</option>
@@ -65,8 +57,6 @@ export default function Home({ allGoshoData }) {
               ))}
             </select>
           </td>
-         
-          
         </tr>
       </table>
 
