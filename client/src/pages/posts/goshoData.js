@@ -56,11 +56,11 @@ export default function GoshoPosts({allGoshoData}) {
                 </h2>
       </Layout>
       </main>
-        <Layout>
+        {/* <Layout>
             <h2>
             <Link href='/'>← Back to home</Link>
             </h2>
-        </Layout>
+        </Layout> */}
 
         </>
     );
