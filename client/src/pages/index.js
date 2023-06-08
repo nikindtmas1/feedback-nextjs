@@ -19,6 +19,18 @@ export async function getStaticProps() {
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ allGoshoData }) {
+
+  function getValue() {
+
+    const e = document.getElementById('people');
+    const value = e.value;
+    
+    
+    console.log(value);
+  }
+    
+
+
   return (
     <>
       <Head>
@@ -32,7 +44,7 @@ export default function Home({ allGoshoData }) {
       <table>
         <tr>
           <td>
-            <select id="people">
+            <select >
               <option value="">Choose...</option>
               <option value="gosho">Gosho</option>
               <option value="tosho">Tosho</option>
@@ -41,7 +53,7 @@ export default function Home({ allGoshoData }) {
             </select>
           </td>
           <td>
-            <select id="people">
+            <select id="people" onChange={getValue}>
               <option value="">...</option>
               {people.map((x) => (
                 <option value={x.name}>{x.name}</option>
