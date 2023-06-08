@@ -9,7 +9,7 @@ export default function ToshoPosts({}) {
       <Head>
         <title>Tosho Data</title>
       </Head>
-      <h2>This Tosho Data Page</h2>
+      <h2>This is Tosho Data Page</h2>
 
       <main className={styles.main}>
         <div className={styles.description}>
