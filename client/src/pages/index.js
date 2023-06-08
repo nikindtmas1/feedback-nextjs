@@ -43,8 +43,10 @@ export default function Home({ allGoshoData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Navigation /> */}
-      <header>
+      <header className={styles.header}>
         <h2>This is Main Page</h2>
+        <button className={styles.headbutton}>Login</button>
+        <button className={styles.headbutton}>Logout</button>
       </header>
       <table>
         <tr>
