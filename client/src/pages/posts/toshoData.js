@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Layout from "../../../components/layout";
+import styles from '../../styles/Home.module.css';
+import Link from "next/link";
 
 export default async function ToshoPosts({}) {
     return (
@@ -13,7 +15,7 @@ export default async function ToshoPosts({}) {
                 This Tosho Data Page
             </h2>
 
-            <main>
+            <main className={styles.main}>
                 <Layout>
                 <h2>
                     <Link href='/'>← Back to home</Link>
