@@ -4,6 +4,8 @@ import styles from "@/styles/Home.module.css";
 import { getFeedbacksData } from "../lib/post";
 import { people } from "@/lib/peoples";
 
+
+
 export async function getStaticProps() {
   const strData = await getFeedbacksData();
 
@@ -25,8 +27,10 @@ export default function Home({ allGoshoData }) {
     const e = document.getElementById('people');
     const value = e.value;
     
-    
-    console.log(value);
+    value === 'Gosho' ? window.location.href='/posts/goshoData' : 
+    value === 'Tosho' ? window.location.href='/posts/toshoData' :
+    value === 'Pesho' ? window.location.href='/posts/peshoData' :
+    value === 'Tomi' ? window.location.href='/posts/tomiData' : null
   }
     
 
@@ -39,11 +43,11 @@ export default function Home({ allGoshoData }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation />
-      <label for="people">Choose a Therapiest: </label>
+      {/* <Navigation /> */}
       <table>
         <tr>
-          <td>
+      <label for="people">Choose a Therapiest: </label>
+          {/* <td>
             <select >
               <option value="">Choose...</option>
               <option value="gosho">Gosho</option>
@@ -51,7 +55,8 @@ export default function Home({ allGoshoData }) {
               <option value="pesho">Pesho</option>
               <option value="tomi">Tomi</option>
             </select>
-          </td>
+          </td> */}
+     
           <td>
             <select id="people" onChange={getValue}>
               <option value="">...</option>
@@ -60,22 +65,8 @@ export default function Home({ allGoshoData }) {
               ))}
             </select>
           </td>
-          <td>
-            <select id="people">
-              <option value="">...</option>
-              {people.map((x) => (
-                <option value={x.name}>{x.name}</option>
-              ))}
-            </select>
-          </td>
-          <td>
-            <select id="people">
-              <option value="">...</option>
-              {people.map((x) => (
-                <option value={x.name}>{x.name}</option>
-              ))}
-            </select>
-          </td>
+         
+          
         </tr>
       </table>
 
