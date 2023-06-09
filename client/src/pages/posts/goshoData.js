@@ -27,7 +27,11 @@ export default function GoshoPosts({allGoshoData}) {
             <h2>
             This is Gosho Data Page
           </h2>
-
+          <div>
+              <label>Added feedback: </label>
+              <input placeholder="Feedback"></input>
+              <input placeholder="Rating"></input>
+          </div>
             <main className={styles.main}>
         <div className={styles.description}>
           {allGoshoData.map(({text, rating,peopleName,userName}) => (
