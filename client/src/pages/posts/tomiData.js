@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import Link from "next/link";
+import styles from '../../styles/Home.module.css';
+
 
 export async function getServerSideProps() {
     const tomiData = await fetch('http://localhost:5000/tomifeedbacks');
@@ -24,7 +26,9 @@ export default function TomiPosts({allTomiData}) {
       </Head>
       <h2>This is Tomi Data Page</h2>
       <main>
-        <div></div>
+        <div>
+
+        </div>
         <Layout>
           <h2>
             <Link href="/">← Back to home</Link>
