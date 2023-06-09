@@ -25,9 +25,24 @@ export default function TomiPosts({allTomiData}) {
         <title>Tomi Page</title>
       </Head>
       <h2>This is Tomi Data Page</h2>
-      <main>
-        <div>
-
+      <main className={styles.main}>
+        <div className={styles.description}>
+            {allTomiData.map(({text, rating,peopleName,userName}) => (
+                <div className={styles.card}>
+                <div className={''}>
+                   {rating}
+                </div>
+                    <div>
+                      {text}
+                    </div>
+                 <div>
+                   {peopleName}
+                 </div>
+                  <div>
+                   {userName}
+                  </div>
+                 </div>
+            ))}
         </div>
         <Layout>
           <h2>
