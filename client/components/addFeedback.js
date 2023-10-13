@@ -3,26 +3,34 @@ import { React, useState, useEffect } from "react";
 
 export function AddFeedback(params) {
 
-    const [newfeedback, setnewfeedback] = useState("");
-    const handleinput = (e) => {
-        setnewfeedback(e.target.value);
-      };
+    const [text, setText] = useState("");
+    const [userName, setUserName] = useState("");
+    const [rating, setRating] = useState(10);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const formDate = new FormData(e.currentTarget)
         console.log(newfeedback);
       };
 
+      const handleTextChange = (e) => {
+        setText(e.target.value);
+      };
+    
+      const handleUserChange = (e) => {
+        setUserName(e.target.value);
+      };
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Added Feedback</label>
         <input 
         type="text" 
         name="text"
         placeholder="Write a review"
-        value={newfeedback} 
-        onChange={hendleTextChange}></input>
+        value={text}
+        onChange={handleTextChange}></input>
      
         <input 
         type="text" 
