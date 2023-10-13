@@ -5,12 +5,21 @@ export function AddFeedback(params) {
 
     const [text, setText] = useState("");
     const [userName, setUserName] = useState("");
+    const [peopleName, setPeopleName] = useState("Tosho");
     const [rating, setRating] = useState(10);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const formDate = new FormData(e.currentTarget)
-        console.log(newfeedback);
+        const formDate = new FormData(e.currentTarget);
+        const text = formDate.get("text").trim();
+        const userName = formDate.get("userName").trim();
+        const newFeedback = {
+            text,
+            rating,
+            peopleName,
+            userName,
+        };
+        console.log(newFeedback);
       };
 
       const handleTextChange = (e) => {
