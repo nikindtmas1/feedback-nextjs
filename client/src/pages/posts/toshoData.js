@@ -29,6 +29,7 @@ export default function ToshoPosts({allToshoData}) {
         <form>
           <label>Added Feedback</label>
           <input name="text" placeholder="Feedback"></input>
+          <input name="rating" placeholder="Rating"></input>
         </form>
       </div>
       <main className={styles.main}>
