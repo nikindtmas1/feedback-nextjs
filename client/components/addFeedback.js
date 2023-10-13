@@ -4,7 +4,9 @@ import { React, useState, useEffect } from "react";
 export function AddFeedback(params) {
 
     const [newfeedback, setnewfeedback] = useState("");
-
+    const handleinput = (e) => {
+        setnewtodo(e.target.value);
+      };
     const HandleSubmit = (e) => {
         console.log(newfeedback);
       };
