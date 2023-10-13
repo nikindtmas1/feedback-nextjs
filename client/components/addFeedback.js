@@ -15,9 +15,9 @@ export function AddFeedback(params) {
     <div>
       <form>
         <label>Added Feedback</label>
-        <input type="text" value={newfeedback} onChange={(e) => handleinput(e)}></input>
-        <input name="rating" placeholder="Rating"></input>
-        <input name="userName" placeholder="Your Name"></input>
+        <input type="text" name="text" value={newfeedback} onChange={(e) => handleinput(e)}></input>
+        <input type="text" name="rating" placeholder="Rating"></input>
+        <input type="text" name="userName" placeholder="Your Name"></input>
         <button onClick={() => HandleSubmit()}>Submit</button>
       </form>
     </div>
