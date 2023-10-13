@@ -41,7 +41,19 @@ display: flex;
 	border-radius: 4px;
 }
 
+.semi button {
+	
+	padding: 5px 13px;
+	background: #f9eec6;
+	color: rgb(8, 8, 49);
+	border-radius: 5px;
+	font-weight: bold;
+}
 
+.semi button:hover {
+	cursor: pointer;
+  background-color: rgb(138, 172, 247);
+}
 
 .description {
   display: inherit;
