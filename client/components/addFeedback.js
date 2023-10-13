@@ -1,5 +1,10 @@
 
 export function AddFeedback(params) {
+
+    const HandleSubmit = (e) => {
+        console.log(newfeedback);
+      };
+
   return (
     <div>
       <form>
