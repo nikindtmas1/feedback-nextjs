@@ -1,5 +1,5 @@
 
-import service from '../services/feedbackServices';
+import * as service from '../services/feedbackServices';
 
 const host = 'http://localhost:5000';
 
