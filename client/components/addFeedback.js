@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-
+import { createToshoFeedback } from "../services/toshoData";
 
 export function AddFeedback(params) {
 
@@ -19,6 +19,8 @@ export function AddFeedback(params) {
             peopleName,
             userName,
         };
+
+        createToshoFeedback(newFeedback);
         console.log(newFeedback);
       };
 
