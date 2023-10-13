@@ -20,6 +20,25 @@ display: flex;
 
 }
 
+.newfeedback h3 {
+	text-align: center;
+}
+
+.newfeedback .semi {
+	display: flex;
+	gap: 8px;
+  justify-content: center;
+}
+
+.semi input {
+	padding: 5px 7px;
+	border: 2px solid rgb(52, 52, 114);
+	outline: none;
+	border-radius: 4px;
+}
+
+
+
 .description {
   display: inherit;
   justify-content: inherit;
