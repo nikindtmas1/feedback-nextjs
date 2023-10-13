@@ -20,6 +20,10 @@ display: flex;
 
 }
 
+.newfeedback h2 {
+	text-align: center;
+}
+
 .newfeedback h3 {
 	text-align: center;
 }

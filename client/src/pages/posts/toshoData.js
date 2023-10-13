@@ -28,7 +28,7 @@ export default function ToshoPosts({allToshoData}) {
         <title>Tosho Data</title>
       </Head>
       <div className={styles.newfeedback}>
-      <h3>This is Tosho Data Page</h3>
+      <h2>This is Tosho Data Page</h2>
       </div>
      <AddFeedback/>
       <main className={styles.main}>
