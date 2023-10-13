@@ -5,7 +5,7 @@ export function AddFeedback(params) {
 
     const [newfeedback, setnewfeedback] = useState("");
     const handleinput = (e) => {
-        setnewtodo(e.target.value);
+        setnewfeedback(e.target.value);
       };
     const HandleSubmit = (e) => {
         console.log(newfeedback);
@@ -15,10 +15,10 @@ export function AddFeedback(params) {
     <div>
       <form>
         <label>Added Feedback</label>
-        <input name="text" placeholder="Feedback"></input>
+        <input type="text" value={newfeedback} onChange={(e) => handleinput(e)}></input>
         <input name="rating" placeholder="Rating"></input>
         <input name="userName" placeholder="Your Name"></input>
-        <button type="submit">Submit</button>
+        <button onClick={() => HandleSubmit()}>Submit</button>
       </form>
     </div>
   );
