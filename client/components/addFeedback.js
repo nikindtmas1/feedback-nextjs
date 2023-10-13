@@ -1,5 +1,9 @@
+import { React, useState, useEffect } from "react";
+
 
 export function AddFeedback(params) {
+
+    const [newfeedback, setnewfeedback] = useState("");
 
     const HandleSubmit = (e) => {
         console.log(newfeedback);
