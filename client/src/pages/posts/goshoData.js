@@ -28,9 +28,12 @@ export default function GoshoPosts({allGoshoData}) {
             This is Gosho Data Page
           </h2>
           <div>
+            <form method="post">
               <label>Added feedback: </label>
               <input placeholder="Feedback"></input>
               <input placeholder="Rating"></input>
+              <button type="submit">Submit</button>
+            </form>
           </div>
             <main className={styles.main}>
         <div className={styles.description}>
