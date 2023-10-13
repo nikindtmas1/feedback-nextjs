@@ -25,7 +25,11 @@ export default function ToshoPosts({allToshoData}) {
         <title>Tosho Data</title>
       </Head>
       <h2>This is Tosho Data Page</h2>
-
+      <div>
+        <form>
+          
+        </form>
+      </div>
       <main className={styles.main}>
         <div className={styles.description}>
             {allToshoData.map(({text, rating,peopleName,userName}) => (
