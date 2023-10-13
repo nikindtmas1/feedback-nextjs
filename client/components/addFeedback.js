@@ -7,7 +7,9 @@ export function AddFeedback(params) {
     const handleinput = (e) => {
         setnewfeedback(e.target.value);
       };
-    const HandleSubmit = (e) => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const formDate = new FormData(e.currentTarget)
         console.log(newfeedback);
       };
 
@@ -15,10 +17,21 @@ export function AddFeedback(params) {
     <div>
       <form>
         <label>Added Feedback</label>
-        <input type="text" name="text" value={newfeedback} onChange={(e) => handleinput(e)}></input>
-        <input type="text" name="rating" placeholder="Rating"></input>
-        <input type="text" name="userName" placeholder="Your Name"></input>
-        <button onClick={() => HandleSubmit()}>Submit</button>
+        <input 
+        type="text" 
+        name="text"
+        placeholder="Write a review"
+        value={newfeedback} 
+        onChange={hendleTextChange}></input>
+     
+        <input 
+        type="text" 
+        name="userName" 
+        placeholder="Write Your Name Pleas !"
+        value={userName} 
+        onChange={handleUserChange}
+        ></input>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
