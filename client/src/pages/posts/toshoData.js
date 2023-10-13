@@ -27,7 +27,8 @@ export default function ToshoPosts({allToshoData}) {
       <h2>This is Tosho Data Page</h2>
       <div>
         <form>
-          
+          <label>Added Feedback</label>
+          <input name="text" placeholder="Feedback"></input>
         </form>
       </div>
       <main className={styles.main}>
