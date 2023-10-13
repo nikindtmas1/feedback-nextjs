@@ -31,33 +31,7 @@ export const settings = {
       headers: {},
     };
   
-    let token = sessionStorage.getItem("authToken");
-  
-    if (token != null) {
-      // Simulates that accessToken has expired
-      const isValid = false;
-      let refreshToken = sessionStorage.getItem("refreshToken");
-      // console.log(refreshToken);
-      if (!isValid) {
-        let res = await fetch(settings.host + "/users/refresh", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            refreshToken,
-          }),
-        });
-        let result = await res.json();
-  
-        sessionStorage.setItem("authToken", result.accessToken);
-        sessionStorage.setItem("refreshToken", result.refreshToken);
-  
-        token = result.accessToken;
-      }
-  
-      options.headers["X-Authorization"] = token;
-    }
+    
   
     if (body) {
       options.headers["Content-Type"] = "application/json";
