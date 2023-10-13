@@ -30,8 +30,8 @@ export default function GoshoPosts({allGoshoData}) {
           <div>
             <form method="post">
               <label>Added feedback: </label>
-              <input placeholder="Feedback"></input>
-              <input placeholder="Rating"></input>
+              <input name="text" placeholder="Feedback"></input>
+              <input name="rating" placeholder="Rating"></input>
               <button type="submit">Submit</button>
             </form>
           </div>
