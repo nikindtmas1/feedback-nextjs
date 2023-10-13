@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { createToshoFeedback } from "../services/toshoData";
-
+import styles from "../src/styles/Home.module.css";
 export function AddFeedback(params) {
 
     const [text, setText] = useState("");
@@ -35,7 +35,9 @@ export function AddFeedback(params) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>Added Feedback</label>
+        <div className={styles.newfeedback}>
+        <h3>Added Feedback</h3>
+        <div className={styles.semi}>
         <input 
         type="text" 
         name="text"
@@ -51,6 +53,8 @@ export function AddFeedback(params) {
         onChange={handleUserChange}
         ></input>
         <button type="submit">Submit</button>
+        </div>
+        </div>
       </form>
     </div>
   );
