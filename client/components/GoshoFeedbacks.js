@@ -13,6 +13,11 @@ export function GoshoFeedbacks() {
             <form>
                 <div>
                     <h3>Added Feedback</h3>
+                    <div>
+                        <input placeholder="Add Feedback"></input>
+                        <input placeholder="Your Name"></input>
+                        <button type="submit">Submit</button>
+                    </div>
                 </div>
             </form>
         </div>
