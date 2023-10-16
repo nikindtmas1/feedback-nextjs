@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../../../components/layout";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
+import { GoshoFeedbacks } from "../../../components/GoshoFeedbacks";
 
 export async function getServerSideProps() {
   const goshoData = await fetch("http://localhost:5000/goshofeedbacks");
@@ -25,15 +26,7 @@ export default function GoshoPosts({ allGoshoData }) {
       <div className={styles.newfeedback}>
         <h2>This is Gosho Data Page</h2>
       </div>
-      <div>
-        <form method="post">
-          <label>Added feedback: </label>
-          <input name="text" placeholder="Feedback"></input>
-          <input name="rating" placeholder="Rating"></input>
-          <input name="userName" placeholder="Your Name"></input>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+   <GoshoFeedbacks/>
       <main className={styles.main}>
         <div className={styles.description}>
           {allGoshoData.map(({ text, rating, peopleName, userName }) => (
