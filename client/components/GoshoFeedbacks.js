@@ -11,7 +11,7 @@ export function GoshoFeedbacks() {
     return(
         <div>
             <form>
-                <div>
+                <div className={styles.newfeedback}>
                     <h3>Added Feedback</h3>
                     <div>
                         <input placeholder="Add Feedback"></input>
