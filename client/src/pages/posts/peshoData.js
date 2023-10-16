@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from '@/styles/Home.module.css'
 import Head from "next/head";
 import Layout from "../../../components/layout";
-
+import { PeshoFeedback } from "../../../components/PeshoFeedback";
 
 export async function getServerSideProps() {
     const responce = await fetch("http://localhost:5000/peshofeedbacks");
@@ -27,7 +27,7 @@ export default function PostOne({allPeshoData}) {
           <h2>
             This is Pesho Data Page
           </h2>
-        
+        <PeshoFeedback/>
         <main className={styles.main}>
         <div className={styles.description}>
           {allPeshoData.map(({text, rating,peopleName,userName}) => (
