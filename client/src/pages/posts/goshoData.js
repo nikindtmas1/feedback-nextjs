@@ -24,9 +24,11 @@ export default function GoshoPosts({allGoshoData}) {
                     Gosho Data
                 </title>
             </Head>
+            <div>
             <h2>
             This is Gosho Data Page
           </h2>
+            </div>
           <div>
             <form method="post">
               <label>Added feedback: </label>
