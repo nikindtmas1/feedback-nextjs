@@ -13,7 +13,7 @@ export function GoshoFeedbacks() {
             <form>
                 <div className={styles.newfeedback}>
                     <h3>Added Feedback</h3>
-                    <div>
+                    <div className={styles.semi}>
                         <input placeholder="Add Feedback"></input>
                         <input placeholder="Your Name"></input>
                         <button type="submit">Submit</button>
