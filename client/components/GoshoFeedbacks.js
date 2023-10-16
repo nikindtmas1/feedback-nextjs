@@ -9,7 +9,7 @@ export function GoshoFeedbacks() {
     const [rating, setRating] = useState(10);
 
     const handleSubmit = (e) => {
-
+        e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const text = formData.get('text').trim();
         const userName = formData.get('userName').trim();
