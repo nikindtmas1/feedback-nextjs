@@ -8,6 +8,21 @@ export function GoshoFeedbacks() {
     const [peopleName, setPeopleName] = useState("Gosho");
     const [rating, setRating] = useState(10);
 
+    const handleSubmit = (e) => {
+
+        const formData = new FormData(e.currentTarget);
+        const text = formData.get('text').trim();
+        const userName = formData.get('userName').trim();
+        const newFeedback = {
+            text,
+            rating,
+            peopleName,
+            userName,
+        };
+
+        createGoshoFeedback(newFeedback);
+    };
+
     const handleTextChange = (e) => {
         setText(e.target.value);
     };
@@ -18,7 +33,7 @@ export function GoshoFeedbacks() {
 
     return(
         <div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className={styles.newfeedback}>
                     <h3>Added Feedback</h3>
                     <div className={styles.semi}>
