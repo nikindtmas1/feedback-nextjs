@@ -26,7 +26,7 @@ export default function GoshoPosts({ allGoshoData }) {
       <div className={styles.newfeedback}>
         <h2>This is Gosho Data Page</h2>
       </div>
-   <GoshoFeedbacks/>
+      <GoshoFeedbacks />
       <main className={styles.main}>
         <div className={styles.description}>
           {allGoshoData.map(({ text, rating, peopleName, userName }) => (
