@@ -1,6 +1,6 @@
 import {React, useState} from "react";
 import { createGoshoFeedback } from "../services/goshoData";
-
+import styles from "../src/styles/Home.module.css";
 
 export function GoshoFeedbacks() {
     const [text, setText] = useState("");
