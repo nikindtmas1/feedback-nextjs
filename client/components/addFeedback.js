@@ -21,7 +21,7 @@ export function AddFeedback(params) {
     };
 
     createToshoFeedback(newFeedback);
-    console.log(newFeedback);
+    
   };
 
   const handleTextChange = (e) => {
