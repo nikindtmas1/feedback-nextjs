@@ -8,6 +8,14 @@ export function GoshoFeedbacks() {
     const [peopleName, setPeopleName] = useState("Gosho");
     const [rating, setRating] = useState(10);
 
+    const handleTextChange = (e) => {
+        setText(e.target.value);
+    };
+
+    const handleUserChange = (e) => {
+        setUserName(e.target.value);
+    };
+
     return(
         <div>
             <form>
