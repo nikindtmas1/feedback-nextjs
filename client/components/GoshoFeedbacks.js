@@ -10,7 +10,11 @@ export function GoshoFeedbacks() {
 
     return(
         <div>
-
+            <form>
+                <div>
+                    <h3>Added Feedback</h3>
+                </div>
+            </form>
         </div>
     );
 }
