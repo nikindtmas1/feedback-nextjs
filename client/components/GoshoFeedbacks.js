@@ -14,8 +14,18 @@ export function GoshoFeedbacks() {
                 <div className={styles.newfeedback}>
                     <h3>Added Feedback</h3>
                     <div className={styles.semi}>
-                        <input placeholder="Add Feedback"></input>
-                        <input placeholder="Your Name"></input>
+                        <input 
+                        type="text" 
+                        name="text" 
+                        placeholder="Write a review"
+                        value={text}
+                        ></input>
+                        <input
+                        type="text"
+                        name="userName"
+                        placeholder="Your Name"
+                        value={userName}
+                        ></input>
                         <button type="submit">Submit</button>
                     </div>
                 </div>
