@@ -27,12 +27,14 @@ export function GoshoFeedbacks() {
                         name="text" 
                         placeholder="Write a review"
                         value={text}
+                        onChange={handleTextChange}
                         ></input>
                         <input
                         type="text"
                         name="userName"
                         placeholder="Your Name"
                         value={userName}
+                        onChange={handleUserChange}
                         ></input>
                         <button type="submit">Submit</button>
                     </div>
