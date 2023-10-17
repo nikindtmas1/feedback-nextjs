@@ -5,6 +5,7 @@ import Layout from "../../../components/layout";
 import { PeshoFeedback } from "../../../components/PeshoFeedback";
 
 export async function getServerSideProps() {
+  try {
     const responce = await fetch("http://localhost:5000/peshofeedbacks");
     const jsonData = await responce.json();
 
@@ -15,6 +16,11 @@ export async function getServerSideProps() {
             allPeshoData,
         },
     }
+  } catch (error) {
+    // Handle errors if the API request fails
+    console.error("Error sending data:", error);
+  }
+    
 }
 
 export default function PostOne({allPeshoData}) {
