@@ -39,7 +39,7 @@ export function PeshoFeedback() {
         <h3>Added Feedback</h3>
           <input
             type="text"
-            name="key"
+            name="text"
             value={formData.key}
             onChange={handleInputChange}
           />
