@@ -19,6 +19,7 @@ export async function getServerSideProps() {
   } catch (error) {
     // Handle errors if the API request fails
     console.error("Error sending data:", error);
+    throw error; // Rethrow the error to be handled elsewhere, if necessary
   }
     
 }
