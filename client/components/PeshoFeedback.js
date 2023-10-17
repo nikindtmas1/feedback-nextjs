@@ -40,7 +40,8 @@ export function PeshoFeedback() {
           <input
             type="text"
             name="text"
-            value={formData.key}
+            placeholder="Write a review"
+            value={text}
             onChange={handleInputChange}
           />
         <button type="submit">Submit</button>
