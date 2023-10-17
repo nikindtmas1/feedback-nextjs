@@ -49,6 +49,37 @@ export async function fetchPeshoDataToAPI(data) {
       console.error('Error sending data:', error);
       throw error; // Rethrow the error to be handled elsewhere, if necessary
     }
+  };
+
+  // utils/api.js
+  export async function fetchUpdateDataToAPI(id, updatedData) {
+  try {
+    // Make a PUT or PATCH request to the API endpoint with updated data
+    const response = await fetch(`http://localhost:5000/peshofeedbacks/${id}`, {
+      method: 'PUT', // or 'PATCH' depending on your API endpoint requirements
+      headers: {
+        'Content-Type': 'application/json', // Specify content type as JSON
+      },
+      body: JSON.stringify(updatedData), // Convert updated data to JSON string
+    });
+
+    // Check if the response is successful
+    if (response.ok) {
+      // Parse the JSON data from the response (if necessary)
+      const responseData = await response.json();
+      return responseData;
+    } else {
+      // Handle errors if the response is not successful
+      throw new Error('Failed to update data on the API');
+    }
+  } catch (error) {
+    // Handle network errors or other exceptions
+    console.error('Error updating data:', error);
+    throw error; // Rethrow the error to be handled elsewhere, if necessary
   }
+}
+
+
+
   
   
