@@ -49,6 +49,7 @@ export function PeshoFeedback() {
           <input
           type="text"
           name="userName"
+          placeholder="Your Name"
           value={formData.value}
           onChange={handleInputChange}
           />
