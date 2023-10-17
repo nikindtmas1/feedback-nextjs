@@ -38,13 +38,22 @@ export function PeshoFeedback() {
       <form onSubmit={handleSubmit}>
         <div className={styles.newfeedback}>
         <h3>Added Feedback</h3>
+        <div className={styles.semi}>
           <input
             type="text"
             name="text"
+            placeholder="Write a review"
             value={formData.key}
             onChange={handleInputChange}
           />
+          <input
+          type="text"
+          name="userName"
+          value={formData.value}
+          onChange={handleInputChange}
+          />
         <button type="submit">Submit</button>
+        </div>
         </div>
       </form>
       {response && <div>API Response: {response.message}</div>}
