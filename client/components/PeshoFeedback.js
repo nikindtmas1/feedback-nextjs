@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-
 import { fetchPeshoDataToAPI } from "../utils/api";
+import styles from "../src/styles/Home.module.css";
 
 
 export function PeshoFeedback() {
@@ -35,16 +35,16 @@ export function PeshoFeedback() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>
-          Key:
+        <div className={styles.newfeedback}>
+        <h3>Added Feedback</h3>
           <input
             type="text"
             name="key"
             value={formData.key}
             onChange={handleInputChange}
           />
-        </label>
         <button type="submit">Submit</button>
+        </div>
       </form>
       {response && <div>API Response: {response.message}</div>}
     </div>
