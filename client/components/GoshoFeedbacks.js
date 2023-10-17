@@ -10,18 +10,24 @@ export function GoshoFeedbacks() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        const formData = new FormData(e.currentTarget);
-        const text = formData.get('text').trim();
-        const userName = formData.get('userName').trim();
-        const newFeedback = {
+        try {
+            const formData = new FormData(e.currentTarget);
+            const text = formData.get('text').trim();
+            const userName = formData.get('userName').trim();
+            const newFeedback = {
             text,
             rating,
             peopleName,
             userName,
         };
+            // Call fetchDataToAPI function to send a POST request with form data
+            await createGoshoFeedback(newFeedback);
 
-       await createGoshoFeedback(newFeedback);
+        } catch (error) {
+            // Handle errors if the API request fails
+            console.error('Error sending data:', error);
+        }
+        
     };
 
     const handleTextChange = (e) => {
