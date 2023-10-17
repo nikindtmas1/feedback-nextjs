@@ -5,6 +5,8 @@ import styles from "../src/styles/Home.module.css";
 
 export function PeshoFeedback() {
   const [formData, setFormData] = useState({
+    peopleName: 'Pesho',
+    rating: 10,
     key: '',
     value: '', // Initialize form fields here
   });
