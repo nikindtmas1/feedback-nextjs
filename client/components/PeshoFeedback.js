@@ -5,7 +5,7 @@ import styles from "../src/styles/Home.module.css";
 
 export function PeshoFeedback() {
   const [formData, setFormData] = useState({
-    key: '', // Initialize form fields here
+    text: '', // Initialize form fields here
   });
   const [response, setResponse] = useState(null);
 
@@ -40,8 +40,7 @@ export function PeshoFeedback() {
           <input
             type="text"
             name="text"
-            placeholder="Write a review"
-            value={text}
+            value={formData.text}
             onChange={handleInputChange}
           />
         <button type="submit">Submit</button>
