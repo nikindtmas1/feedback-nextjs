@@ -7,7 +7,7 @@ export function TomiFeedback() {
         rating: 10,
         peopleName: "Tomi",
         key: "",
-        value: "",
+        value: "",// Initialize form fields here
     });
     
     return(
