@@ -20,6 +20,7 @@ export function TomiFeedback() {
                         name="userName"
                         placeholder="Your Name"
                         />
+                        <button>Submit</button>
                     </div>
                 </div>
             </form>
