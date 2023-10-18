@@ -10,7 +10,11 @@ export function TomiFeedback() {
                 <div className={styles.newfeedback}>
                     <h3>Added Feedback</h3>
                     <div className={styles.semi}>
-                        <input />
+                        <input 
+                        type="text"
+                        name="text"
+                        placeholder="Write a review"
+                        />
                     </div>
                 </div>
             </form>
