@@ -3,6 +3,12 @@ import { fetchTomiDataToAPI } from "../utils/api";
 import styles from "../src/styles/Home.module.css";
 
 export function TomiFeedback() {
+    const [formData, setFormData] = useState({
+        rating: 10,
+        peopleName: "Tomi",
+        key: "",
+        value: "",
+    });
     
     return(
         <div>
