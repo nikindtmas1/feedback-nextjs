@@ -74,5 +74,9 @@ export async function fetchUpdatePeshoDataToAPI(id, updatedData) {
 };
 
 export async function fetchTomiDataToAPI(data) {
-  
+  try {
+    
+  } catch (error) {
+    
+  }
 }
