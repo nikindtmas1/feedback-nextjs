@@ -24,7 +24,7 @@ export function TomiFeedback() {
 
     return(
         <div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className={styles.newfeedback}>
                     <h3>Added Feedback</h3>
                     <div className={styles.semi}>
