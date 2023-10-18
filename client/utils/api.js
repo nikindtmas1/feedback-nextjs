@@ -1,3 +1,5 @@
+import { post } from "../services/feedbackServices";
+
 export async function fetchPeshoDataFromAPI() {
   try {
     // Make a GET request to the API endpoint
@@ -75,8 +77,15 @@ export async function fetchUpdatePeshoDataToAPI(id, updatedData) {
 
 export async function fetchTomiDataToAPI(data) {
   try {
-    
+    //Make a POST request to the API endpoint with JSON data
+    const response = await fetch('http://localhost:5000/tomifeedbacks', {
+      method: "POST",
+      headers: {
+        "Content-Type": "applications/json"//Specify content type as JSON
+      },
+      body: JSON.stringify(data),//Convert data to JSON string
+    });
   } catch (error) {
     
   }
-}
+};
