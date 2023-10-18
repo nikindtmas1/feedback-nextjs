@@ -7,9 +7,9 @@ export function TomiFeedback() {
     return(
         <div>
             <form>
-                
-            <h2>Added Feedback</h2>
-
+                <div >
+                    <h2>Added Feedback</h2>
+                </div>
             </form>
         </div>
     );
