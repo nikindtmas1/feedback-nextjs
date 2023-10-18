@@ -11,9 +11,13 @@ export function TomiFeedback() {
     });
     
     const handleInputChange = (e) => {
-
+        // Update formData as the user types
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+    });
     };
-    
+
     return(
         <div>
             <form>
