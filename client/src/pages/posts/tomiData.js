@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../../../components/layout";
 import Link from "next/link";
 import styles from '../../styles/Home.module.css';
+import { TomiFeedback } from "../../../components/TomiFeedback";
 
 
 export async function getServerSideProps() {
