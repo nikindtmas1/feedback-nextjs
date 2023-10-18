@@ -71,4 +71,8 @@ export async function fetchUpdatePeshoDataToAPI(id, updatedData) {
     console.error("Error updating data:", error);
     throw error; // Rethrow the error to be handled elsewhere, if necessary
   }
+};
+
+export async function fetchTomiDataToAPI(data) {
+  
 }
