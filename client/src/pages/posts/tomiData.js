@@ -25,7 +25,7 @@ export default function TomiPosts({allTomiData}) {
       <Head>
         <title>Tomi Page</title>
       </Head>
-      <div>
+      <div className={styles.newfeedback}>
         <h2>This is Tomi Data Page</h2>
       </div>
       <TomiFeedback />
