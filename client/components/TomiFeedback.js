@@ -9,6 +9,8 @@ export function TomiFeedback() {
         key: "",
         value: "",// Initialize form fields here
     });
+
+    const [response, setResponse] = useState(null);
     
     const handleInputChange = (e) => {
         // Update formData as the user types
