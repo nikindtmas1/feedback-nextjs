@@ -10,6 +10,10 @@ export function TomiFeedback() {
         value: "",// Initialize form fields here
     });
     
+    const handleInputChange = (e) => {
+
+    };
+    
     return(
         <div>
             <form>
