@@ -15,6 +15,7 @@ export function TomiFeedback() {
                         name="text"
                         placeholder="Write a review"
                         />
+                        <input />
                     </div>
                 </div>
             </form>
