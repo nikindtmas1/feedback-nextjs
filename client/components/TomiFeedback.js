@@ -7,7 +7,7 @@ export function TomiFeedback() {
     return(
         <div>
             <form>
-                <div >
+                <div className={styles.newfeedback}>
                     <h2>Added Feedback</h2>
                 </div>
             </form>
