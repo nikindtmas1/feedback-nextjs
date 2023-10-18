@@ -28,12 +28,14 @@ export function TomiFeedback() {
                         type="text"
                         name="text"
                         placeholder="Write a review"
+                        value={formData.key}
                         onChange={handleInputChange}
                         />
                         <input 
                         type="text"
                         name="userName"
                         placeholder="Your Name"
+                        value={formData.value}
                         onChange={handleInputChange}
                         />
                         <button 
