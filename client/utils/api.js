@@ -77,15 +77,26 @@ export async function fetchUpdatePeshoDataToAPI(id, updatedData) {
 
 export async function fetchTomiDataToAPI(data) {
   try {
-    //Make a POST request to the API endpoint with JSON data
+    // Make a POST request to the API endpoint with JSON data
     const response = await fetch('http://localhost:5000/tomifeedbacks', {
       method: "POST",
       headers: {
-        "Content-Type": "applications/json"//Specify content type as JSON
+        "Content-Type": "applications/json"// Specify content type as JSON
       },
-      body: JSON.stringify(data),//Convert data to JSON string
+      body: JSON.stringify(data),// Convert data to JSON string
     });
+      // Check if the response is ok
+      if(response.ok){
+        // Pars the JSON data from the response (if necessary)
+        const responseData = await response.json();
+        return responseData;
+      }else{
+        // Handle errors if the responses is not successful
+        throw new Error("Failed to send data to API")
+      }
   } catch (error) {
-    
+    // Handle network errors or other exceptions
+    console.error("Error sending data:", error);
+    throw error;// Rethrow the error to be handled elsewhere, if necessary
   }
 };
