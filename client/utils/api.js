@@ -46,7 +46,7 @@ export async function fetchPeshoDataToAPI(data) {
   }
 }
 
-export async function fetchUpdateDataToAPI(id, updatedData) {
+export async function fetchUpdatePeshoDataToAPI(id, updatedData) {
   try {
     // Make a PUT or PATCH request to the API endpoint with updated data
     const response = await fetch(`http://localhost:5000/peshofeedbacks/${id}`, {
