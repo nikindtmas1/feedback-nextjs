@@ -29,7 +29,9 @@ export function TomiFeedback() {
             // Set the API response in the component state
             setResponse(apiResponse);
         } catch (error) {
-            
+            // Handle errors if the API request fails
+            console.error("Error sending data:", error);
+            throw error; // Rethrow the error to be handled elsewhere, if necessary
         }
     };
 
