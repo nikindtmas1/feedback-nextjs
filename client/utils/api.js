@@ -81,7 +81,7 @@ export async function fetchTomiDataToAPI(data) {
     const response = await fetch('http://localhost:5000/tomifeedbacks', {
       method: "POST",
       headers: {
-        "Content-Type": "applications/json"// Specify content type as JSON
+        "Content-Type": "application/json",// Specify content type as JSON
       },
       body: JSON.stringify(data),// Convert data to JSON string
     });
