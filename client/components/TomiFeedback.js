@@ -22,6 +22,15 @@ export function TomiFeedback() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        try {
+            // Call fetchDataToAPI function to send a POST request with form data
+            const apiResponse = await fetchTomiDataToAPI(formData);
+
+            // Set the API response in the component state
+            setResponse(apiResponse);
+        } catch (error) {
+            
+        }
     };
 
     return(
