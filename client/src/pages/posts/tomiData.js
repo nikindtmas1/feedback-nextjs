@@ -1,30 +1,28 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Stack from '@mui/material/Stack';
-import SendIcon from '@mui/icons-material/Send';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import DeleteIcon from "@mui/icons-material/Delete";
+import Stack from "@mui/material/Stack";
+import SendIcon from "@mui/icons-material/Send";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import Link from "next/link";
-import styles from '../../styles/Home.module.css';
+import styles from "../../styles/Home.module.css";
 import { TomiFeedback } from "../../../components/TomiFeedback";
 
-
 export async function getServerSideProps() {
-    const tomiData = await fetch('http://localhost:5000/tomifeedbacks');
-    const jsonData = await tomiData.json();
+  const tomiData = await fetch("http://localhost:5000/tomifeedbacks");
+  const jsonData = await tomiData.json();
 
-    const allTomiData = Object.values(jsonData);
+  const allTomiData = Object.values(jsonData);
 
-    return {
-        props: {
-            allTomiData,
-        },
-    }
-};
+  return {
+    props: {
+      allTomiData,
+    },
+  };
+}
 
-export default function TomiPosts({allTomiData}) {
-
+export default function TomiPosts({ allTomiData }) {
   return (
     <>
       <Head>
@@ -36,23 +34,22 @@ export default function TomiPosts({allTomiData}) {
       <TomiFeedback />
       <main className={styles.main}>
         <div className={styles.description}>
-            {allTomiData.map(({text, rating,peopleName,userName}) => (
-                <div className={styles.card}>
-                <div className={''}>
-                   {rating}
-                </div>
-                    <div>
-                      {text}
-                    </div>
-                 <div>
-                   {peopleName}
-                 </div>
-                  <div>
-                   {userName}
-                  </div>
-                 </div>
-            ))}
-
+          {allTomiData.map(({ text, rating, peopleName, userName }) => (
+            <div className={styles.card}>
+              <div className={""}>{rating}</div>
+              <div>{text}</div>
+              <div>{peopleName}</div>
+              <div>{userName}</div>
+            </div>
+          ))}
+          <Stack direction="row" spacing={2}>
+            <Button variant="outlined" startIcon={<DeleteIcon />}>
+              Delete
+            </Button>
+            <Button variant="contained" endIcon={<SendIcon />}>
+              Send
+            </Button>
+          </Stack>
         </div>
         <Layout>
           <h2>
