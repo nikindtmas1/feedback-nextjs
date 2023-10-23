@@ -1,3 +1,8 @@
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Stack from '@mui/material/Stack';
+import SendIcon from '@mui/icons-material/Send';
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import Link from "next/link";
@@ -47,6 +52,7 @@ export default function TomiPosts({allTomiData}) {
                   </div>
                  </div>
             ))}
+
         </div>
         <Layout>
           <h2>
