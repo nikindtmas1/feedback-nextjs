@@ -8,6 +8,7 @@ import Layout from "../../../components/layout";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
 import { TomiFeedback } from "../../../components/TomiFeedback";
+import { Card, Box } from "@mui/material";
 
 export async function getServerSideProps() {
   const tomiData = await fetch("http://localhost:5000/tomifeedbacks");
@@ -35,6 +36,9 @@ export default function TomiPosts({ allTomiData }) {
       <main className={styles.main}>
         <div className={styles.description}>
           {allTomiData.map(({ text, rating, peopleName, userName }) => (
+            <Card>
+              <Box sx={{ p: 2, display: 'flex' }}>
+                <Stack spacing={0.5}>
             <div className={styles.card}>
               <div className={""}>{rating}</div>
               <div>{text}</div>
@@ -46,6 +50,9 @@ export default function TomiPosts({ allTomiData }) {
               </Button>
               </Stack>
             </div>
+                </Stack>
+              </Box>
+            </Card>
           ))}
           
         </div>
