@@ -1,8 +1,9 @@
-import * as React from "react";
+import React from "react";
 import Button from "@mui/material/Button";
-import DeleteIcon from "@mui/icons-material/Delete";
+//import DeleteIcon from "@mui/icons-material/Delete"
+// import DeleteIcon from "@mui/icons-material/Delete";
 import Stack from "@mui/material/Stack";
-import SendIcon from "@mui/icons-material/Send";
+// import SendIcon from "@mui/icons-material/Send";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import Link from "next/link";
@@ -40,21 +41,21 @@ export default function TomiPosts({ allTomiData }) {
               <div>{text}</div>
               <div>{peopleName}</div>
               <div>{userName}</div>
+              <Stack direction="row" spacing={2}>
+              <Button variant="outlined" >
+                Delete
+              </Button>
+              </Stack>
             </div>
           ))}
-          <Stack direction="row" spacing={2}>
-            <Button variant="outlined" startIcon={<DeleteIcon />}>
-              Delete
-            </Button>
-            <Button variant="contained" endIcon={<SendIcon />}>
-              Send
-            </Button>
-          </Stack>
+          
         </div>
         <Layout>
-          <h2>
-            <Link href="/">← Back to home</Link>
-          </h2>
+          <Link href="/">
+          <Button variant="contained" >
+            Home page
+          </Button>
+          </Link>
         </Layout>
       </main>
     </>
