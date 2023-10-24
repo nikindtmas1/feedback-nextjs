@@ -37,30 +37,29 @@ export default function TomiPosts({ allTomiData }) {
         <div className={styles.description}>
           {allTomiData.map(({ text, rating, peopleName, userName }) => (
             <Card>
-              <Box sx={{ p: 2, display: 'flex' }}>
+              <Box sx={{ p: 2, display: "flex" }}>
                 <Stack spacing={0.5}>
-            <div className={styles.card}>
-              <div className={""}>{rating}</div>
-              <div>{text}</div>
-              <div>{peopleName}</div>
-              <div>{userName}</div>
-              <Stack direction="row" spacing={2}>
-              <Button variant="outlined" startIcon={<DeleteIcon />}>
-                Delete
-              </Button>
-              </Stack>
-            </div>
+                  <div className={styles.card}>
+                    <div className={""}>{rating}</div>
+                    <div>{text}</div>
+                    <div>{peopleName}</div>
+                    <div>{userName}</div>
+                    <Stack direction="row" spacing={2}>
+                      <Button variant="outlined" startIcon={<DeleteIcon />}>
+                        Delete
+                      </Button>
+                    </Stack>
+                  </div>
                 </Stack>
               </Box>
             </Card>
           ))}
-          
         </div>
         <Layout>
           <Link href="/">
-          <Button variant="contained" endIcon={<SendIcon />}>
-            Home page
-          </Button>
+            <Button variant="contained" endIcon={<SendIcon />}>
+              Home page
+            </Button>
           </Link>
         </Layout>
       </main>
