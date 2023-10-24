@@ -37,7 +37,7 @@ export default function TomiPosts({ allTomiData }) {
         <div className={styles.description}>
           {allTomiData.map(({ text, rating, peopleName, userName }) => (
             <Card>
-              <Box sx={{ p: 2, display: 'flex' }}>
+              <Box sx={{ p: 8, display: 'flex' }}>
                 <Stack spacing={0.5}>
             <div className={styles.card}>
               <div className={""}>{rating}</div>
