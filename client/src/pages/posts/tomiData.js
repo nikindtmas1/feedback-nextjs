@@ -8,7 +8,8 @@ import Layout from "../../../components/layout";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
 import { TomiFeedback } from "../../../components/TomiFeedback";
-import { Card, Box } from "@mui/material";
+import { Card, Box, Typography, Avatar, IconButton } from "@mui/material";
+import { Delete } from "@mui/icons-material";
 
 export async function getServerSideProps() {
   const tomiData = await fetch("http://localhost:5000/tomifeedbacks");
@@ -40,9 +41,9 @@ export default function TomiPosts({ allTomiData }) {
               <Box sx={{ p: 2, display: "flex" }}>
                 <Stack spacing={0.5}>
                   <div className={styles.card}>
+                    <div>{peopleName}</div>
                     <div className={""}>{rating}</div>
                     <div>{text}</div>
-                    <div>{peopleName}</div>
                     <div>{userName}</div>
                     <Stack direction="row" spacing={2}>
                       <Button variant="outlined" startIcon={<DeleteIcon />}>
