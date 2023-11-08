@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as services from "../../../utils/api";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
@@ -27,9 +28,24 @@ export async function getServerSideProps() {
 
 export default function TomiPosts({ allTomiData }) {
 
-  const handleDelete = (e) => {
-    console.log(e.currentTarget.id);
+  const handleDelete = async (e) => {
+    const itemId = e.currentTarget.id;
+   
+
+    try {
+      // Call fetchDeleteToAPI function to send a DELETE request
+      await services.fetchDeleteTomiDataToAPI(itemId);
+
+      // Handle the successful deletion (if needed)
+      console.log('Data deleted successfully');
+      
+      // Perform additional actions after deletion, such as updating state or showing a message
+    } catch (error) {
+      // Handle errors if the API request fails
+      console.error('Error deleting data:', error);
+    }
   };
+
 
   return (
     <>
