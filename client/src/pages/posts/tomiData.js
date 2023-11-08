@@ -27,8 +27,8 @@ export async function getServerSideProps() {
 
 export default function TomiPosts({ allTomiData }) {
 
-  const handleDelete = () => {
-    console.log("Delete");
+  const handleDelete = (e) => {
+    console.log(e.currentTarget.id);
   };
 
   return (
@@ -42,7 +42,7 @@ export default function TomiPosts({ allTomiData }) {
       <TomiFeedback />
       <main className={styles.main}>
         <div className={styles.description}>
-          {allTomiData.map(({ text, rating, peopleName, userName }) => (
+          {allTomiData.map(({ text, rating, peopleName, userName, _id }) => (
             <Card>
               <Box sx={{ p: 2, display: "flex" }}>
                 <Stack spacing={0.5}>
@@ -52,12 +52,12 @@ export default function TomiPosts({ allTomiData }) {
                     <div>{text}</div>
                     <div>{userName}</div>
                     <Stack direction="row" spacing={2}>
-                      <Button variant="outlined" startIcon={<DeleteIcon />} onClick={handleDelete}>
+                      <Button id={_id} variant="outlined" startIcon={<DeleteIcon />} onClick={handleDelete}>
                         Delete
                       </Button>
                     </Stack>
                     <Stack direction="row" spacing={2}>
-                      <Button variant="outlined" startIcon={<EditIcon />}>
+                      <Button id={_id} variant="outlined" startIcon={<EditIcon />}>
                         Edit
                       </Button>
                     </Stack>
