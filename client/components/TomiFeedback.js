@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { fetchTomiDataToAPI } from "../utils/api";
+import * as services from "../utils/api";
 import styles from "../src/styles/Home.module.css";
 
 export function TomiFeedback() {
@@ -24,7 +25,7 @@ export function TomiFeedback() {
         e.preventDefault();
         try {
             // Call fetchDataToAPI function to send a POST request with form data
-            const apiResponse = await fetchTomiDataToAPI(formData);
+            const apiResponse = await services.fetchTomiDataToAPI(formData);
 
             // Set the API response in the component state
             setResponse(apiResponse);
