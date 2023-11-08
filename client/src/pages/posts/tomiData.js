@@ -9,7 +9,7 @@ import Link from "next/link";
 import styles from "../../styles/Home.module.css";
 import { TomiFeedback } from "../../../components/TomiFeedback";
 import { Card, Box, Typography, Avatar, IconButton } from "@mui/material";
-import { Delete } from "@mui/icons-material";
+
 
 export async function getServerSideProps() {
   const tomiData = await fetch("http://localhost:5000/tomifeedbacks");
