@@ -1,6 +1,7 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 import Stack from "@mui/material/Stack";
 import SendIcon from "@mui/icons-material/Send";
 import Head from "next/head";
@@ -48,6 +49,11 @@ export default function TomiPosts({ allTomiData }) {
                     <Stack direction="row" spacing={2}>
                       <Button variant="outlined" startIcon={<DeleteIcon />}>
                         Delete
+                      </Button>
+                    </Stack>
+                    <Stack direction="row" spacing={2}>
+                      <Button variant="outlined" startIcon={<EditIcon />}>
+                        Edit
                       </Button>
                     </Stack>
                   </div>
