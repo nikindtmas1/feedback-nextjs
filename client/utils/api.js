@@ -100,3 +100,29 @@ export async function fetchTomiDataToAPI(data) {
     throw error;// Rethrow the error to be handled elsewhere, if necessary
   }
 };
+
+
+export async function fetchDeleteTomiDataToAPI(id) {
+  try {
+    // Make a DELETE request to the API endpoint
+    const response = await fetch(`http://localhost:5000/tomifeedbacks/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json', // Specify content type as JSON if necessary
+      },
+    });
+
+    // Check if the response is successful
+    if (response.ok) {
+      // Handle a successful deletion (if needed)
+      console.log('Data deleted successfully');
+    } else {
+      // Handle errors if the response is not successful
+      throw new Error('Failed to delete data from the API');
+    }
+  } catch (error) {
+    // Handle network errors or other exceptions
+    console.error('Error deleting data:', error);
+    throw error; // Rethrow the error to be handled elsewhere, if necessary
+  }
+};
