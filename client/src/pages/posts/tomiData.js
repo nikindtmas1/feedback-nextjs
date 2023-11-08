@@ -26,6 +26,11 @@ export async function getServerSideProps() {
 }
 
 export default function TomiPosts({ allTomiData }) {
+
+  const handleDelete = () => {
+    console.log("Delete");
+  };
+
   return (
     <>
       <Head>
@@ -47,7 +52,7 @@ export default function TomiPosts({ allTomiData }) {
                     <div>{text}</div>
                     <div>{userName}</div>
                     <Stack direction="row" spacing={2}>
-                      <Button variant="outlined" startIcon={<DeleteIcon />}>
+                      <Button variant="outlined" startIcon={<DeleteIcon />} onClick={handleDelete}>
                         Delete
                       </Button>
                     </Stack>
