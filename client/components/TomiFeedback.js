@@ -14,6 +14,7 @@ export function TomiFeedback() {
     const [response, setResponse] = useState(null);
     
     const handleInputChange = (e) => {
+        e.preventDefault();
         // Update formData as the user types
         setFormData({
             ...formData,
@@ -61,6 +62,7 @@ export function TomiFeedback() {
                     </div>
                 </div>
             </form>
+            {response && <div>API Response: {response.message}</div>}
         </div>
     );
 };
